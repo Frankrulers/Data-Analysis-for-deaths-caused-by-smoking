@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.45">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ajay A (FT251008) Ambika Prasad Swain (FT251013) Anubhav Verma (FT251021) Pragati Sharma (FT251053) Tushar Ranjan (FT251098) Waagmee Singh (FT251105)">
+
+<title>Statistics Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="section-1-group-20_files/libs/clipboard/clipboard.min.js"></script>
+<script src="section-1-group-20_files/libs/quarto-html/quarto.js"></script>
+<script src="section-1-group-20_files/libs/quarto-html/popper.min.js"></script>
+<script src="section-1-group-20_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="section-1-group-20_files/libs/quarto-html/anchor.min.js"></script>
+<link href="section-1-group-20_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="section-1-group-20_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="section-1-group-20_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="section-1-group-20_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="section-1-group-20_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#data-visulisation-and-analysis" id="toc-data-visulisation-and-analysis" class="nav-link" data-scroll-target="#data-visulisation-and-analysis"><span class="header-section-number">2</span> Data Visulisation and Analysis</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">3</span> Discussion</a></li>
+  <li><a href="#finding-correlation-between-the-major-variables" id="toc-finding-correlation-between-the-major-variables" class="nav-link" data-scroll-target="#finding-correlation-between-the-major-variables"><span class="header-section-number">4</span> Finding Correlation between the major variables</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">6</span> Reference</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="section-1-group-20.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="section-1-group-20.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Statistics Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ajay A (FT251008) Ambika Prasad Swain (FT251013) Anubhav Verma (FT251021) Pragati Sharma (FT251053) Tushar Ranjan (FT251098) Waagmee Singh (FT251105) </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>A recently published report by the World Health Organization (WHO) highlights the alarming impact of tobacco, alcohol, ultra-processed foods (UPFs), and fossil fuels on public health in Europe. According to the report, these industries are responsible for 2.7 million deaths annually, a staggering 24.5% of all mortality across Europe’s 53 states. Smoking remains a significant concern, with approximately 29% of European adults using tobacco, leading to lung cancer, cardiovascular diseases, and respiratory disorders. Alcohol consumption is also widespread, particularly among adolescents, with 57% of 15-year-olds having tried alcohol and harmful drinking patterns being prevalent. As emphasized in one of the Guardian article: (https://www.theguardian.com/society/article/2024/jun/12/tobacco-alcohol-ultra-processed-foods-fossil-fuels-deaths), the WHO calls for stricter government regulations on these health-harming products, pointing out how misleading marketing and interference from powerful industries derail efforts to combat diseases like cancer, heart disease, and diabetes. The report emphasizes that European countries are failing to meet sustainable development goals related to health, with insufficient measures in place to reduce smoking, alcohol consumption, and the appeal of unhealthy foods. As we explore this topic further, we can delve into descriptive statistics, graphs, and charts to understand the trends and impact more deeply.</p>
+<div id="672db5f5-1da8-442a-ae46-d77581f59f2a" class="cell" data-tags="[]" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings <span class="op">;</span> warnings.warn <span class="op">=</span> <span class="kw">lambda</span> <span class="op">*</span>args,<span class="op">**</span>kwargs: <span class="va">None</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> spst</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="f5030291-161e-4ef7-84b6-169e3a7766c2" class="cell" data-tags="[]" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_csv(<span class="st">'D:/PGPM-24-25/Python/number-of-deaths-by-risk-factor.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="772f663f-6fb7-4d20-ab86-a3dde2458681" class="cell" data-tags="[]" data-execution_count="50">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<pre><code>Entity                                                                                                                   0
+Code                                                                                                                   690
+Year                                                                                                                     0
+Deaths that are from all causes attributed to high systolic blood pressure, in both sexes aged all ages                  0
+Deaths that are from all causes attributed to diet high in sodium, in both sexes aged all ages                           0
+Deaths that are from all causes attributed to diet low in whole grains, in both sexes aged all ages                      0
+Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages                                   0
+Deaths that are from all causes attributed to diet low in fruits, in both sexes aged all ages                            0
+Deaths that are from all causes attributed to unsafe water source, in both sexes aged all ages                           0
+Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages                              0
+Deaths that are from all causes attributed to low birth weight, in both sexes aged all ages                              0
+Deaths that are from all causes attributed to child wasting, in both sexes aged all ages                                 0
+Deaths that are from all causes attributed to unsafe sex, in both sexes aged all ages                                    0
+Deaths that are from all causes attributed to diet low in nuts and seeds, in both sexes aged all ages                    0
+Deaths that are from all causes attributed to household air pollution from solid fuels, in both sexes aged all ages      0
+Deaths that are from all causes attributed to diet low in vegetables, in both sexes aged all ages                        0
+Deaths that are from all causes attributed to smoking, in both sexes aged all ages                                       0
+Deaths that are from all causes attributed to high fasting plasma glucose, in both sexes aged all ages                   0
+Deaths that are from all causes attributed to air pollution, in both sexes aged all ages                                 0
+Deaths that are from all causes attributed to high body-mass index, in both sexes aged all ages                          0
+Deaths that are from all causes attributed to unsafe sanitation, in both sexes aged all ages                             0
+Deaths that are from all causes attributed to drug use, in both sexes aged all ages                                      0
+Deaths that are from all causes attributed to low bone mineral density, in both sexes aged all ages                      0
+Deaths that are from all causes attributed to vitamin a deficiency, in both sexes aged all ages                          0
+Deaths that are from all causes attributed to child stunting, in both sexes aged all ages                                0
+Deaths that are from all causes attributed to non-exclusive breastfeeding, in both sexes aged all ages                   0
+Deaths that are from all causes attributed to iron deficiency, in both sexes aged all ages                               0
+Deaths that are from all causes attributed to ambient particulate matter pollution, in both sexes aged all ages          0
+Deaths that are from all causes attributed to low physical activity, in both sexes aged all ages                         0
+Deaths that are from all causes attributed to no access to handwashing facility, in both sexes aged all ages             0
+Deaths that are from all causes attributed to high ldl cholesterol, in both sexes aged all ages                          0
+dtype: int64</code></pre>
+</div>
+</div>
+<p>Despite having null values for the Code column its usage is not mandatory for further analysis which is why we have decide to leave it as is</p>
+</section>
+<section id="data-visulisation-and-analysis" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Data Visulisation and Analysis</h1>
+<div id="ab85ce13-63cc-46f2-9689-75c4b1786595" class="cell" data-tags="[]" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>selected_columns_for_pie <span class="op">=</span> [</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages'</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to diet high in sodium, in both sexes aged all ages'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to high body-mass index, in both sexes aged all ages'</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>aggregate_data <span class="op">=</span> df[selected_columns_for_pie].<span class="bu">sum</span>()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>aggregate_data.index <span class="op">=</span> [<span class="st">'Alcohol Use'</span>, <span class="st">'Smoking'</span>, <span class="st">'High Sodium Diet'</span>, <span class="st">'High Body Mass Index'</span>]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.pie(aggregate_data, labels<span class="op">=</span>aggregate_data.index, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">140</span>, colors<span class="op">=</span>sns.color_palette(<span class="st">'viridis'</span>))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Causes of Death by Alcohol, Smoking, High Sodium, and High Body Mass Index'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'equal'</span>) </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The above pie chart provides the distribution for causes of death attributed to alcohol use, smoking, high sodium diet, and high body mass index, the key observations would be as follows: Of these four risk factors, smoking makes the single largest contribution, with 49.6 percent of all deaths attributed to it alone. This is clearly indicative—almost half of the deaths due to these four risk factors are due to smoking Primary Factory : Smoking stands outstanding as the leading cause of death among these risk factors; this suggests that tobacco use is the key public health challenge that requires quite a considerable mobilization with aggressive and sustained intervention. Dietary and Lifestyle Factors: At the same time, 35.5 percent of deaths come as a result of high BMI associated with a diet high in sodium, which immediately indicates that dietary and lifestyle factors are vital determinants of mortality. In this respect, one of the key elements in public health strategy formulation is promoting healthy eating and active living.</p>
+<p>These are all, to a great extent, preventable causes of premature death. Indeed, serious mortality reductions might result from effective interventions against smoking, drinking alcohol, unhealthy diets, and body weight management.</p>
+<div id="a89374fc-90da-479d-a848-8fd4ecb885fc" class="cell" data-tags="[]" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span> df.groupby(<span class="st">'Year'</span>).<span class="bu">sum</span>().reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="61ab1296-be94-40a4-b979-a1b30f16155f" class="cell" data-tags="[]" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">25</span>, <span class="dv">20</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data.set_index(<span class="st">'Year'</span>).plot(kind<span class="op">=</span><span class="st">'line'</span>, figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">10</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Death Causes Over Time'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Deaths'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Cause of Death'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 2500x2000 with 0 Axes&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Graph Overview (1990-2019): The graph provides a detailed look at mortality trends over three decades in Europe, measuring deaths in millions on the y-axis and years on the x-axis. Each cause of death is represented by a unique line and labeled in the graph’s legend.</p>
+<p>Medical Advancements: There have been significant advancements in medical research that have improved life expectancy and reduced deaths from certain causes, particularly those related to smoking and alcohol abuse.</p>
+<p>Rise in Preventable Deaths:</p>
+<pre><code>High Systolic Blood Pressure: Represented by a blue line, deaths have nearly doubled from just over 4 million in 1990 to 7 million in 2019, highlighting the increasing prevalence of hypertension-related issues.
+Smoking and Secondhand Smoke: Deaths, shown by the red and pink lines, have consistently increased, indicating ongoing challenges with smoking and vaping.
+Alcohol Abuse: The trend shows a peak in alcohol-related deaths in 2005, followed by a general decline.</code></pre>
+<p>Comparative Analysis of Smoking and Alcohol-Related Deaths:</p>
+<pre><code>Smoking: Peaked in 1994 with the highest number of deaths, followed by a general decline from 2004 to 2014, a slight increase in 2015, and then stabilization.
+Alcohol Consumption: Deaths peaked between 2000 and 2010, with significant declines post-2005, although the trend shows fluctuations.</code></pre>
+<p>Conclusion: Despite medical advancements, there is a concerning rise in preventable deaths, particularly from high blood pressure, smoking, and alcohol. While alcohol-related deaths have seen a significant decline since 2005, smoking-related deaths continue to show inconsistent patterns..</p>
+<div id="63d86d26-183d-48a5-aa21-83b9a48973e3" class="cell" data-tags="[]" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>risk_factors <span class="op">=</span> [<span class="st">'Deaths that are from all causes attributed to diet low in fruits, in both sexes aged all ages'</span>, <span class="st">'Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages'</span>, <span class="st">'Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages'</span>, <span class="st">'Deaths that are from all causes attributed to household air pollution from solid fuels, in both sexes aged all ages'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="st">'European Region (WHO)'</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>country_data <span class="op">=</span> df[df[<span class="st">'Entity'</span>] <span class="op">==</span> country]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the trends for selected risk factors over time for Afghanistan</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">10</span>))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> factor <span class="kw">in</span> risk_factors:</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>country_data, x<span class="op">=</span><span class="st">'Year'</span>, y<span class="op">=</span>factor, label<span class="op">=</span>factor)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Trends of Selected Risk Factors Over Time in </span><span class="sc">{</span>country<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Deaths'</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Risk Factor'</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Graphs shows trends of selected riks factors of death in Europe and how it compares Deaths caused by alcohol and passive smoking playing a role in it</p>
+<div id="7889a4c2-d7d7-4dfc-896c-c29b16369567" class="cell" data-tags="[]" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>country_data <span class="op">=</span> df[df[<span class="st">'Entity'</span>] <span class="op">==</span><span class="st">'European Region (WHO)'</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>smoking_column <span class="op">=</span> <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.plot(country_data[<span class="st">'Year'</span>], country_data[smoking_column], marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Trend of Deaths Attributed to Smoking in European Regions Over the Years'</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Deaths'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="dea56375-ba26-4974-8b40-a3af78761db7" class="cell" data-tags="[]" data-execution_count="12">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>country_data <span class="op">=</span> df[df[<span class="st">'Entity'</span>] <span class="op">==</span> <span class="st">'European Region (WHO)'</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>smoking_column <span class="op">=</span> <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>alcohol_column <span class="op">=</span> <span class="st">'Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages'</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> country_data[<span class="st">'Year'</span>]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.4</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> np.arange(<span class="bu">len</span>(years))</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">10</span>))</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.bar(index, country_data[smoking_column], bar_width, label<span class="op">=</span><span class="st">'Smoking'</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.bar(index <span class="op">+</span> bar_width, country_data[alcohol_column], bar_width, label<span class="op">=</span><span class="st">'Alcohol'</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Deaths'</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Comparison of Deaths Attributed to Smoking and Alcohol in European Region'</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(index <span class="op">+</span> bar_width <span class="op">/</span> <span class="dv">2</span>, years, rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This report analyzes trends in deaths due to alcohol consumption and smoking across 56 European countries from 1990 to 2019. The data shows that deaths from alcohol consumption peaked in 2005 after experiencing fluctuations, with a general decline starting in 2006. In contrast, the highest number of deaths from smoking was recorded in 1994, followed by variable patterns, including a general decline from 2004 to 2014, with a slight increase in 2015 and stabilization until 2019. The comparative analysis reveals that both alcohol and smoking-related deaths followed similar trends in the early 1990s, with alcohol-related deaths peaking between 2000 and 2010, while smoking-related deaths showed more fluctuating trends. Overall, while alcohol-related deaths have declined significantly since 2005, smoking-related deaths have shown more inconsistent changes over the period.</p>
+<div id="4ee8fc86-cc0d-4a00-bec1-42a80780cc0c" class="cell" data-tags="[]" data-execution_count="14">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>recent_year <span class="op">=</span> df[<span class="st">'Year'</span>].<span class="bu">max</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data_recent_year <span class="op">=</span> df[df[<span class="st">'Year'</span>] <span class="op">==</span> recent_year]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>smoking_column <span class="op">=</span> <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>data_sorted <span class="op">=</span> data_recent_year[[<span class="st">'Entity'</span>, smoking_column]].sort_values(by<span class="op">=</span>smoking_column, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">10</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.barh(data_sorted[<span class="st">'Entity'</span>], data_sorted[smoking_column])</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Number of Deaths'</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Country'</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Top 10 Countries by Smoking-Related Deaths in </span><span class="sc">{</span>recent_year<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>plt.gca().invert_yaxis()</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Global Impact of Smoking: Smoking is the leading cause of death globally, with over 7 million deaths, indicating a severe impact on worldwide health.</p>
+<p>High Death Rates in G20 Countries: The data shows that even in developed nations within the G20, smoking remains a major cause of mortality.</p>
+<p>Burden in Middle-Income Countries: Middle-income and lower-middle-income countries report notably high numbers of smoking-related deaths, suggesting a significant public health challenge. This is possibly due to higher smoking rates combined with less adequate healthcare facilities.</p>
+<p>Regional Impact: The Western Pacific Region of WHO, East Asia &amp; Pacific of the World Bank, and Southeast Asia Region of WHO are particularly affected. China, with its large population and high smoking prevalence, contributes significantly to the mortality figures in these areas.</p>
+<p>OECD Countries: These high-income nations report fewer deaths compared to middle-income countries, likely benefiting from better healthcare infrastructure and effective smoking cessation programs.</p>
+<p>Call for Action: The data underscores the need for comprehensive tobacco control measures and public health interventions across all countries to reduce the burden of smoking-related diseases.</p>
+<div id="6449e705-aa64-430e-8e07-c7ac97ca3ceb" class="cell" data-tags="[]" data-execution_count="16">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>columns_of_interest <span class="op">=</span> [</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Entity'</span>, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Year'</span>, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages'</span>, </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df[columns_of_interest]</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>df_eu_world_who <span class="op">=</span> df_filtered[df_filtered[<span class="st">'Entity'</span>].isin([<span class="st">'European Region (WHO)'</span>, <span class="st">'World'</span>])]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>df_eu_world_who.rename(columns<span class="op">=</span>{</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to alcohol use, in both sexes aged all ages'</span>: <span class="st">'Deaths by Alcohol'</span>,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span>: <span class="st">'Deaths by Smoking'</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>baseline_year <span class="op">=</span> df_eu_world_who[<span class="st">'Year'</span>].<span class="bu">min</span>()</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>df_baseline_who <span class="op">=</span> df_eu_world_who[df_eu_world_who[<span class="st">'Year'</span>] <span class="op">==</span> baseline_year].set_index(<span class="st">'Entity'</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>df_normalized_who <span class="op">=</span> df_eu_world_who.copy()</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> entity <span class="kw">in</span> df_normalized_who[<span class="st">'Entity'</span>].unique():</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    baseline_alcohol <span class="op">=</span> df_baseline_who.loc[entity, <span class="st">'Deaths by Alcohol'</span>]</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    baseline_smoking <span class="op">=</span> df_baseline_who.loc[entity, <span class="st">'Deaths by Smoking'</span>]</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    df_normalized_who.loc[df_normalized_who[<span class="st">'Entity'</span>] <span class="op">==</span> entity, <span class="st">'Deaths by Alcohol'</span>] <span class="op">/=</span> baseline_alcohol</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    df_normalized_who.loc[df_normalized_who[<span class="st">'Entity'</span>] <span class="op">==</span> entity, <span class="st">'Deaths by Smoking'</span>] <span class="op">/=</span> baseline_smoking</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>df_long_normalized_who <span class="op">=</span> df_normalized_who.melt(id_vars<span class="op">=</span>[<span class="st">'Entity'</span>, <span class="st">'Year'</span>], </span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>                                                value_vars<span class="op">=</span>[<span class="st">'Deaths by Alcohol'</span>, <span class="st">'Deaths by Smoking'</span>], </span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>                                                var_name<span class="op">=</span><span class="st">'Cause'</span>, value_name<span class="op">=</span><span class="st">'Deaths'</span>)</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.relplot(data<span class="op">=</span>df_long_normalized_who, x<span class="op">=</span><span class="st">'Year'</span>, y<span class="op">=</span><span class="st">'Deaths'</span>, hue<span class="op">=</span><span class="st">'Cause'</span>, style<span class="op">=</span><span class="st">'Entity'</span>, </span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>                kind<span class="op">=</span><span class="st">'scatter'</span>, height<span class="op">=</span><span class="dv">6</span>, aspect<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Deaths by Alcohol vs Deaths by Smoking (European Region WHO and World)'</span>, y<span class="op">=</span><span class="fl">1.03</span>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Normalized Number of Deaths"</span>)</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Discussion</h1>
+<p>The line graphs for deaths caused by alcohol and smoking in both the EU and the world were normalized to facilitate comparison from a common starting point. The analysis of these graphs revealed distinct trends and intersection points:</p>
+<p>Deaths by Alcohol in the EU: This line peaked in 2005, followed by a consistent decline. By 2009, the decline in alcohol-related deaths in the EU became more pronounced, as the global line for alcohol-related deaths surpassed it and continued to rise.</p>
+<p>Deaths by Alcohol in the World: The global line for alcohol-related deaths initially followed a similar trajectory as the EU but diverged around 2009, increasing steadily thereafter while the EU line continued to decline.</p>
+<p>Deaths by Smoking in the EU: From 1990 to 1995, the trend for smoking-related deaths in the EU mirrored that of the world. Post-1995, the EU line showed a marked decrease, reaching record-low levels by 2020 (comparatively).</p>
+<p>Deaths by Smoking in the World: Unlike the EU, the global trend for smoking-related deaths showed a moderate increase after 1995, continuing on this upward trajectory through 2020.</p>
+<p>Intersection of Mortality Trends: A significant point of intersection occurred in 2012, where global deaths from smoking surpassed deaths from alcohol in the EU. This indicates shifting public health challenges and the relative impact of these substances over time.</p>
+<p>The observed trends highlight the varying impact of public health interventions and socio-economic factors. The decline in alcohol and smoking-related deaths in the EU post-2005 and 1995, respectively, suggests effective public health policies and increased awareness. In contrast, the global rise in these mortality rates indicates a need for stronger international efforts. The comparative analysis of EU and global mortality rates reveals the effectiveness of EU policies but also underscores the ongoing global challenges. While the EU’s declining rates reflect successful interventions, the rising global trends call for enhanced international collaboration and comprehensive strategies to reduce the health impacts of smoking and alcohol.</p>
+<div id="3a488a19-f37e-4d73-b688-5cc0137194a4" class="cell" data-tags="[]" data-execution_count="18">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>columns_of_interest_extended <span class="op">=</span> [</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Entity'</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Year'</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages'</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>df_filtered_extended <span class="op">=</span> df[columns_of_interest_extended]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>df_european_region_who <span class="op">=</span> df_filtered_extended[df_filtered_extended[<span class="st">'Entity'</span>] <span class="op">==</span> <span class="st">'European Region (WHO)'</span>]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>df_european_region_who.rename(columns<span class="op">=</span>{</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages'</span>: <span class="st">'Deaths by Secondhand Smoke'</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span>: <span class="st">'Deaths by Smoking'</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>baseline_year <span class="op">=</span> df_european_region_who[<span class="st">'Year'</span>].<span class="bu">min</span>()</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>df_baseline <span class="op">=</span> df_european_region_who[df_european_region_who[<span class="st">'Year'</span>] <span class="op">==</span> baseline_year]</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>df_normalized <span class="op">=</span> df_european_region_who.copy()</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>df_normalized[<span class="st">'Deaths by Secondhand Smoke'</span>] <span class="op">/=</span> df_baseline[<span class="st">'Deaths by Secondhand Smoke'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>df_normalized[<span class="st">'Deaths by Smoking'</span>] <span class="op">/=</span> df_baseline[<span class="st">'Deaths by Smoking'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>df_long_normalized <span class="op">=</span> df_normalized.melt(id_vars<span class="op">=</span>[<span class="st">'Year'</span>], </span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>                                        value_vars<span class="op">=</span>[ <span class="st">'Deaths by Secondhand Smoke'</span>, <span class="st">'Deaths by Smoking'</span>], </span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>                                        var_name<span class="op">=</span><span class="st">'Cause'</span>, value_name<span class="op">=</span><span class="st">'Normalized Deaths'</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>df_long_normalized, x<span class="op">=</span><span class="st">'Year'</span>, y<span class="op">=</span><span class="st">'Normalized Deaths'</span>, hue<span class="op">=</span><span class="st">'Cause'</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">' Deaths by Cause in European Region (WHO)'</span>)</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Normalized Number of Deaths'</span>)</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Cause'</span>)</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="section-1-group-20_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The data on deaths caused by smoking and secondhand smoke was collected over 30 years, from 1990 to 2020. Both datasets showed a similar trend: an initial rise, peaking in 1994, followed by a decline. This pattern was evident in the line graphs plotted for both variables.</p>
+<p>Deaths by Smoking: The line graph indicated an upward trend starting in 1990, reaching its highest point in 1994. After 1994, a gradual decline was observed, suggesting that measures taken to reduce smoking rates might be having a positive impact. Deaths by Secondhand Smoke: Similarly, deaths due to secondhand smoke peaked in 1994. However, the decline in mortality from secondhand smoke post-1994 was more pronounced compared to deaths caused directly by smoking.</p>
+</section>
+<section id="finding-correlation-between-the-major-variables" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Finding Correlation between the major variables</h1>
+<div id="0be28e30-3ae1-47e7-8085-a7f78ba0a690" class="cell" data-tags="[]" data-execution_count="20">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>columns_of_interest_extended <span class="op">=</span> [</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Entity'</span>, </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Year'</span>, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages'</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>df_filtered_extended <span class="op">=</span> df[columns_of_interest_extended]</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>df_european_region_who <span class="op">=</span> df_filtered_extended[df_filtered_extended[<span class="st">'Entity'</span>] <span class="op">==</span> <span class="st">'European Region (WHO)'</span>]</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>df_european_region_who.rename(columns<span class="op">=</span>{</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to smoking, in both sexes aged all ages'</span>: <span class="st">'Deaths by Smoking'</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Deaths that are from all causes attributed to secondhand smoke, in both sexes aged all ages'</span>: <span class="st">'Deaths by Secondhand Smoke'</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> df_european_region_who[[<span class="st">'Deaths by Smoking'</span>, <span class="st">'Deaths by Secondhand Smoke'</span>]].corr()</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Correlation between Smoking and Secondhand Smoking:"</span>)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correlation between Smoking and Secondhand Smoking:
+                            Deaths by Smoking  Deaths by Secondhand Smoke
+Deaths by Smoking                     1.00000                     0.97406
+Deaths by Secondhand Smoke            0.97406                     1.00000</code></pre>
+</div>
+</div>
+<p>To quantify the relationship between deaths caused by smoking and secondhand smoke, correlation was calculated between the two variables. The correlation coefficient was calculated to be 0.97406, indicating a very strong positive relationship between the two variables. This high correlation suggests that factors influencing smoking-related deaths likely have a similar impact on deaths caused by secondhand smoke. This finding highlights the importance of comprehensive public health strategies targeting smoking reduction not only for the benefit of smokers but also for reducing harm to non-smokers exposed to secondhand smoke.</p>
+</section>
+<section id="conclusion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
+<p>The descriptive and inferential analysis underscores the critical public health issue posed by smoking and alcoholism in Europe. The observed decline in mortality rates since the peak in 1994 is encouraging, yet the persistent high number of deaths calls for continued and enhanced regulatory measures. As European countries work towards meeting the WHO’s sustainable development goals, it is imperative to implement effective strategies that address direct, indirect smoking and alcoholism related health risks. Future research and statistical analysis, including more detailed descriptive statistics, graphs, and charts, will be essential to monitor progress and guide public health interventions.</p>
+</section>
+<section id="reference" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Reference</h1>
+<p>https://ourworldindata.org/smoking</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
